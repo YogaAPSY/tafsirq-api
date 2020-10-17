@@ -1,0 +1,1236 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TafsirQ API</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <div class="doc-logo"><img src="images/logo.png" alt="Logo" /></div>
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="introduction">Introduction</h1>
+
+<p>Selamat datang di TafsirQ API. Kamu dapat menggunakannya untuk mengakses <em>Endpoint</em> dari API TafsirQ seperti Quran dan Hadits.</p>
+
+<h1 id="authentication">Authentication</h1>
+
+<p>Tafsirq API kami menggunakan APP_ID untuk authentikasi yang dimasukan ke Request Header dari setiap client app. Jika ada yang membutuhkan data pada Tafsirq API untuk membuat client app diperlukan APP_ID untuk mengaksesnya. Untuk mendapatkan APP_ID silahkan hubungi Administrator atau bisa dengan menghubungi email info@javan.co.id.</p>
+
+<h1 id="rate-limit">Rate Limit</h1>
+
+<p>Pada TafsirQ API kami menggunakan <em>Rate Limit</em> untuk membatasi <em>request</em> pada API yang ada. Saat ini <em>Rate Limit</em> yang kami batasi adalah 60 <em>request</em> setiap 1 menit dan dibatasi berdasarkan <strong>IP Address</strong>.</p>
+
+          <h1 id="quran">Quran</h1>
+
+<h2 id="get-surah-list">Get Surah List</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/quran/surah'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Fatihah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الفاتحة"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pembukaan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"البقرة"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sapi Betina"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">286</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ali 'Imran"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"آل عمران"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keluarga 'Imran"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An-Nisa'"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"النساء"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wanita"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">176</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Ma'idah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"المائدة"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jamuan (hidangan makanan)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-An'am"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الأنعام"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Binatang Ternak"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">165</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-A’raf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الأعراف"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tempat yang tertinggi"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">206</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Anfal"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الأنفال"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harta rampasan perang"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">75</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"At-Taubah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"التوبة"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pengampunan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">129</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yunus"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"يونس"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nabi Yunus"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">109</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hud"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"هود"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nabi Hud"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yusuf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"يوسف"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nabi Yusuf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">111</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ar-Ra’d"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الرعد"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Guruh (petir)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">43</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ibrahim"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ابراهيم"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nabi Ibrahim"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Hijr"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الحجر"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al Hijr (nama gunung)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An-Nahl"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"النحل"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lebah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Isra'"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الإسراء"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Memperjalankan di waktu malam"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">111</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Kahf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الكهف"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Penghuni-penghuni gua"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">110</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maryam"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"مريم"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maryam (Maria)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">98</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ta Ha"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"طه"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ta Ha"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meccan"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">135</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan list dari Surah yang ada pada Al-Qur&#39;an</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/quran/surah</code></p>
+
+<h2 id="get-ayah-list-by-specific-surah">Get Ayah List by Specific Surah</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/quran/surah/2/ayah'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">" الم"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alif laam miim.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِلْمُتَّقِينَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kitab (Al Quran) ini tidak ada keraguan padanya; petunjuk bagi mereka yang bertakwa,</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(yaitu) mereka yang beriman kepada yang ghaib, yang mendirikan shalat, dan menafkahkan sebahagian rezeki yang Kami anugerahkan kepada mereka.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dan mereka yang beriman kepada Kitab (Al Quran) yang telah diturunkan kepadamu dan Kitab-kitab yang telah diturunkan sebelummu, serta mereka yakin akan adanya (kehidupan) akhirat.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"أُولَٰئِكَ عَلَىٰ هُدًى مِنْ رَبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mereka itulah yang tetap mendapat petunjuk dari Tuhan mereka, dan merekalah orang-orang yang beruntung.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sesungguhnya orang-orang kafir, sama saja bagi mereka, kamu beri peringatan atau tidak kamu beri peringatan, mereka tidak juga akan beriman.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِمْ وَعَلَىٰ سَمْعِهِمْ ۖ وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ ۖ وَلَهُمْ عَذَابٌ عَظِيمٌ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allah telah mengunci-mati hati dan pendengaran mereka, dan penglihatan mereka ditutup. Dan bagi mereka siksa yang amat berat.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"وَمِنَ النَّاسِ مَنْ يَقُولُ آمَنَّا بِاللَّهِ وَبِالْيَوْمِ الْآخِرِ وَمَا هُمْ بِمُؤْمِنِينَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Di antara manusia ada yang mengatakan: </span><span class="se">\"</span><span class="s2">Kami beriman kepada Allah dan Hari kemudian,</span><span class="se">\"</span><span class="s2"> pada hal mereka itu sesungguhnya bukan orang-orang yang beriman.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ إِلَّا أَنْفُسَهُمْ وَمَا يَشْعُرُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mereka hendak menipu Allah dan orang-orang yang beriman, padahal mereka hanya menipu dirinya sendiri sedang mereka tidak sadar.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"فِي قُلُوبِهِمْ مَرَضٌ فَزَادَهُمُ اللَّهُ مَرَضًا ۖ وَلَهُمْ عَذَابٌ أَلِيمٌ بِمَا كَانُوا يَكْذِبُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dalam hati mereka ada penyakit, lalu ditambah Allah penyakitnya; dan bagi mereka siksa yang pedih, disebabkan mereka berdusta.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"وَإِذَا قِيلَ لَهُمْ لَا تُفْسِدُوا فِي الْأَرْضِ قَالُوا إِنَّمَا نَحْنُ مُصْلِحُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan bila dikatakan kepada mereka: </span><span class="se">\"</span><span class="s2">Janganlah kamu membuat kerusakan di muka bumi</span><span class="se">\"</span><span class="s2">. Mereka menjawab: </span><span class="se">\"</span><span class="s2">Sesungguhnya kami orang-orang yang mengadakan perbaikan</span><span class="se">\"</span><span class="s2">.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"أَلَا إِنَّهُمْ هُمُ الْمُفْسِدُونَ وَلَٰكِنْ لَا يَشْعُرُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ingatlah, sesungguhnya mereka itulah orang-orang yang membuat kerusakan, tetapi mereka tidak sadar.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"وَإِذَا قِيلَ لَهُمْ آمِنُوا كَمَا آمَنَ النَّاسُ قَالُوا أَنُؤْمِنُ كَمَا آمَنَ السُّفَهَاءُ ۗ أَلَا إِنَّهُمْ هُمُ السُّفَهَاءُ وَلَٰكِنْ لَا يَعْلَمُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apabila dikatakan kepada mereka: </span><span class="se">\"</span><span class="s2">Berimanlah kamu sebagaimana orang-orang lain telah beriman</span><span class="se">\"</span><span class="s2">. Mereka menjawab: </span><span class="se">\"</span><span class="s2">Akan berimankah kami sebagaimana orang-orang yang bodoh itu telah beriman?</span><span class="se">\"</span><span class="s2"> Ingatlah, sesungguhnya merekalah orang-orang yang bodoh; tetapi mereka tidak tahu.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"وَإِذَا لَقُوا الَّذِينَ آمَنُوا قَالُوا آمَنَّا وَإِذَا خَلَوْا إِلَىٰ شَيَاطِينِهِمْ قَالُوا إِنَّا مَعَكُمْ إِنَّمَا نَحْنُ مُسْتَهْزِئُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan bila mereka berjumpa dengan orang-orang yang beriman, mereka mengatakan: </span><span class="se">\"</span><span class="s2">Kami telah beriman</span><span class="se">\"</span><span class="s2">. Dan bila mereka kembali kepada syaitan-syaitan mereka, mereka mengatakan: </span><span class="se">\"</span><span class="s2">Sesungguhnya kami sependirian dengan kamu, kami hanyalah berolok-olok</span><span class="se">\"</span><span class="s2">.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"اللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allah akan (membalas) olok-olokan mereka dan membiarkan mereka terombang-ambing dalam kesesatan mereka.</span><span class="se">\n</span><span class="s2">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"pagination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">286</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8000/api/quran/surah/2/ayah?page=2"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan list ayat dari suatu Surah.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/quran/surah/&lt;SURAH_ID&gt;/ayah</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SURAH_ID</td>
+<td>ID dari surah</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-a-specific-ayah">Get a Specific Ayah</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/quran/surah/1/ayah/1'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ayah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Fatihah"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"translation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang.</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AKHLAQ DAN ADAB"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IBADAH"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1225</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zikir"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1551</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klasifikasi zikir"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1561</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Basmalah (Bismillahirrahmanirrahiim)"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1584</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Membaca basmalah pada setiap keadaan"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1587</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAN"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1724</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cabang-cabang iman"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1732</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Akidah"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1733</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beriman pada Allah Ta'ala"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1734</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zat dan sifat Allah"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1747</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kasih sayang Allah yang luas"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1771</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"tafsirs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36118</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tafsir Web Id"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tafsir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p class=</span><span class="se">\"</span><span class="s2">tafsir-deskripsi</span><span class="se">\"</span><span class="s2">&gt;Maksudnya adalah </span><span class="se">\"</span><span class="s2">Saya memulai membaca surat Al-Fatihah ini dengan menyebut nama Allah sambil memohon pertolongan kepada-Nya agar dapat membaca firman-Nya, memahami maknanya dan dapat mengambilnya sebagai petunjuk.</span><span class="se">\"</span><span class="s2"> Setiap pekerjaan yang baik, hendaknya dimulai dengan menyebut asma Allah, seperti makan, minum, menyembelih hewan, menaiki kendaraan, membaca Al Qur'an di awal surat, masuk dan keluar masjid, mengunci pintu, masuk dan keluar rumah, menulis surat, hendak berwudhu' dan sebagainya. Allah ialah nama Zat Yang Mahasuci, yang satu-satunya berhak disembah dengan sebenarnya disertai rasa cinta, takut dan berharap kepada-Nya, Zat yang tidak membutuhkan makhluk-Nya, tetapi makhluk yang membutuhkan-Nya. Ar Rahmaan (Maha Pemurah): salah satu nama Allah yang memberi pengertian bahwa Allah memiliki rahmat (kasih-sayang) yang luas mengena kepada semua makhluk-Nya, sedangkan Ar Rahiim artinya Allah Maha Penyayang kepada orang-orang mukmin. Kepada orang-orang mukmin itu diberikan-Nya rahmat yang mutlak, selain mereka hanya memperperoleh sebagian daripadanya. Ar Rahmaan dan Ar Rahiim merupakan nama Allah yang menetapkan adanya sifat rahmah (sayang) bagi Allah Ta'ala sesuai dengan kebesaran-Nya.&lt;/p&gt;"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tafsir Jalalayn"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tafsir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(Dengan nama Allah Yang Maha Pemurah lagi Maha Penyayang)"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6237</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tafsir Quraish Shihab"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tafsir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[[1 ~ FATIHAH AL-KITAB (PEMBUKA KITAB SUCI) Pendahuluan: Makkiyyah, 7 ayat ~ Surat al-Fâtihah ini termasuk kelompok surat Makkiyyah yang turun di Mekah sebelum hijrah. Disebut al-Fâtihah (pembuka), karena letaknya yang berada urutan pertama surat-surat al-Qur'ân. Surat yang pertama diturunkan secara lengkap di antara surat-surat yang ada dalam al-Qur'ân ini merupakan intisari dari seluruh kandungan al-Qur'ân yang kemudian diperinci oleh surat-surat sesudahnya. Tema-tema pokok al-Qur'ân--seperti penjelasan tawhid dan keimanan, janji dan kabar gembira bagi orang-orang Mukmin, ancaman dan peringatan bagi orang-orang kafir dan pelaku kejahatan, tentang ibadah, kisah orang-orang yang beruntung karena taat kepada Allah dan sengsara karena mengingkari-Nya--semua itu tercermin secara singkat dalam surat ini. Oleh sebab itu, surat ini juga disebut dengan nama Umm al-Kitâb (induk al-Qur'ân).]] Surat ini dimulai dengan menyebut nama Allah--satu-satunya Tuhan yang berhak disembah--Yang memiliki seluruh sifat kesempurnaan dan tersucikan dari segala bentuk kekurangan. Dialah Pemilik rahmah (sifat kasih) yang tak habis-habisnya, Yang menganugerahkan segala macam kenikmatan, baik besar maupun kecil."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan detail dari suatu ayat.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/quran/surah/&lt;SURAH_ID&gt;/ayah/&lt;AYAH_ID&gt;</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SURAH_ID</td>
+<td>ID dari surah</td>
+</tr>
+<tr>
+<td>AYAH_ID</td>
+<td>ID dari ayat</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-surah-list-by-juz">Get Surah List by Juz</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/quran/medina/juz/{ID}'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"surah"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sapi Betina"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ayah_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">286</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"surah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">" الم"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِلْمُتَّقِينَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"أُولَٰئِكَ عَلَىٰ هُدًى مِنْ رَبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan surah list dari Juz yang ada pada Al-Qur&#39;an</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/quran/medina/juz/2</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>ID dari Juz</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-ayah-list-by-page">Get Ayah List by Page</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/quran/medina/{PAGE}'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"surah"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Baqarah"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sapi Betina"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ayah_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">286</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"surah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِمْ وَعَلَىٰ سَمْعِهِمْ ۖ وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ ۖ وَلَهُمْ عَذَابٌ عَظِيمٌ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"وَمِنَ النَّاسِ مَنْ يَقُولُ آمَنَّا بِاللَّهِ وَبِالْيَوْمِ الْآخِرِ وَمَا هُمْ بِمُؤْمِنِينَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ إِلَّا أَنْفُسَهُمْ وَمَا يَشْعُرُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"فِي قُلُوبِهِمْ مَرَضٌ فَزَادَهُمُ اللَّهُ مَرَضًا ۖ وَلَهُمْ عَذَابٌ أَلِيمٌ بِمَا كَانُوا يَكْذِبُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"وَإِذَا قِيلَ لَهُمْ لَا تُفْسِدُوا فِي الْأَرْضِ قَالُوا إِنَّمَا نَحْنُ مُصْلِحُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"أَلَا إِنَّهُمْ هُمُ الْمُفْسِدُونَ وَلَٰكِنْ لَا يَشْعُرُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"وَإِذَا قِيلَ لَهُمْ آمِنُوا كَمَا آمَنَ النَّاسُ قَالُوا أَنُؤْمِنُ كَمَا آمَنَ السُّفَهَاءُ ۗ أَلَا إِنَّهُمْ هُمُ السُّفَهَاءُ وَلَٰكِنْ لَا يَعْلَمُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"وَإِذَا لَقُوا الَّذِينَ آمَنُوا قَالُوا آمَنَّا وَإِذَا خَلَوْا إِلَىٰ شَيَاطِينِهِمْ قَالُوا إِنَّا مَعَكُمْ إِنَّمَا نَحْنُ مُسْتَهْزِئُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"اللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"أُولَٰئِكَ الَّذِينَ اشْتَرَوُا الضَّلَالَةَ بِالْهُدَىٰ فَمَا رَبِحَتْ تِجَارَتُهُمْ وَمَا كَانُوا مُهْتَدِينَ"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan ayah list dari Page yang ada pada Al-Qur&#39;an</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/quran/medina/3</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PAGE</td>
+<td>PAGE dari Ayah</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-ayah-list-by-surah">Get Ayah List by Surah</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/quran/medina/surat/{SURAH_ID}'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"surah"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Al-Ma'idah"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"meaning"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jamuan (hidangan makanan)"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ayah_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"surah_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medinan"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text_arab"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">" يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ ۚ أُحِلَّتْ لَكُمْ بَهِيمَةُ الْأَنْعَامِ إِلَّا مَا يُتْلَىٰ عَلَيْكُمْ غَيْرَ مُحِلِّي الصَّيْدِ وَأَنْتُمْ حُرُمٌ ۗ إِنَّ اللَّهَ يَحْكُمُ مَا يُرِيدُ"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحِلُّوا شَعَائِرَ اللَّهِ وَلَا الشَّهْرَ الْحَرَامَ وَلَا الْهَدْيَ وَلَا الْقَلَائِدَ وَلَا آمِّينَ الْبَيْتَ الْحَرَامَ يَبْتَغُونَ فَضْلًا مِنْ رَبِّهِمْ وَرِضْوَانًا ۚ وَإِذَا حَلَلْتُمْ فَاصْطَادُوا ۚ وَلَا يَجْرِمَنَّكُمْ شَنَآنُ قَوْمٍ أَنْ صَدُّوكُمْ عَنِ الْمَسْجِدِ الْحَرَامِ أَنْ تَعْتَدُوا ۘ وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ الْعِقَابِ"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan ayah list dari surah yang ada pada Al-Qur&#39;an</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/quran/medina/surat/5</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SURAH_ID</td>
+<td>ID dari Surah</td>
+</tr>
+</tbody></table>
+
+          <h1 id="hadits">Hadits</h1>
+
+<h2 id="get-hadits-books">Get Hadits Books</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/hadits'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abu Daud"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4419</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abu-daud"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ahmad"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4305</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ahmad"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bukhari"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">6638</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bukhari"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Darimi"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2949</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darimi"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ibnu Majah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4285</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ibnu-majah"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan list dari semua buku hadits</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/hadits</code></p>
+
+<h2 id="get-hadits-list-by-hadits-book">Get Hadits List by Hadits Book</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/hadits/muslim'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24184</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"وَهُوَ الْأَثَرُ الْمَشْهُورُ</span><span class="se">\n</span><span class="s2">عَنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مَنْ حَدَّثَ عَنِّي بِحَدِيثٍ يُرَى أَنَّهُ كَذِبٌ فَهُوَ أَحَدُ الْكَاذِبِينَ حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ حَدَّثَنَا وَكِيعٌ عَنْ شُعْبَةَ عَنْ الْحَكَمِ عَنْ عَبْدِ الرَّحْمَنِ بْنِ أَبِي لَيْلَى عَنْ سَمُرَةَ بْنِ جُنْدَبٍ ح و حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ أَيْضًا حَدَّثَنَا وَكِيعٌ عَنْ شُعْبَةَ وَسُفْيَانَ عَنْ حَبِيبٍ عَنْ مَيْمُونِ بْنِ أَبِي شَبِيبٍ عَنْ الْمُغِيرَةِ بْنِ شُعْبَةَ قَالَا قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ذَلِكَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan ia merupakan atsar yang masyhur dari Rasulullah shallallahu 'alaihi wasallam, </span><span class="se">\"</span><span class="s2">Barangsiapa menceritakan hadits dariku, yang mana riwayat itu diduga adalah kebohongan, maka dia (perawi) adalah salah satu dari para pembohong tersebut.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] telah menceritakan kepada kami [Waki'] dari [Syu'bah] dari [al Hakam] dari [Abdurrahman bin Abu Laila] dari [Samurah bin Jundab]. (dalam riwayat lain disebutkan) dan juga telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] telah menceritakan kepada kami [Waki'] dari [Syu'bah] dan [Sufyan] dari [Habib] dari [Maimun bin Abu Syabib] dari [al-Mughirah bin Syu'bah] keduanya berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda tentang hal tersebut.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24185</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ حَدَّثَنَا إِسْمَعِيلُ يَعْنِي ابْنَ عُلَيَّةَ عَنْ عَبْدِ الْعَزِيزِ بْنِ صُهَيْبٍ عَنْ أَنَسِ بْنِ مَالِكٍ أَنَّهُ قَالَ</span><span class="se">\n</span><span class="s2">إِنَّهُ لَيَمْنَعُنِي أَنْ أُحَدِّثَكُمْ حَدِيثًا كَثِيرًا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ مَنْ تَعَمَّدَ عَلَيَّ كَذِبًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنْ النَّارِ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Zuhair bin Harb] telah menceritakan kepada kami [Ismail] -yaitu Ibnu 'Ulayyah- dari [Abdul Aziz bin Shuhaib] dari [Anas bin Malik] bahwasanya dia berkata, 'Sesungguhnya sesuatu yang menghalangiku untuk menceritakan hadits yang banyak kepada kalian adalah, bahwa Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Barangsiapa yang sengaja melakukan kedustaan atas namaku, maka hendaklah dia menempati tempat duduknya dari neraka'.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24186</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنَا مُحَمَّدُ بْنُ عُبَيْدٍ الْغُبَرِيُّ حَدَّثَنَا أَبُو عَوَانَةَ عَنْ أَبِي حَصِينٍ عَنْ أَبِي صَالِحٍ عَنْ أَبِي هُرَيْرَةَ قَالَ</span><span class="se">\n</span><span class="s2">قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مَنْ كَذَبَ عَلَيَّ مُتَعَمِّدًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنْ النَّارِ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin Ubaid al-Ghubari] telah menceritakan kepada kami [Abu Awanah] dari [Abu Hashin] dari [Abu Shalih] dari [Abu Hurairah] dia berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Barangsiapa berdusta atas namaku maka hendaklah dia menempati tempat duduknya dari neraka.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24187</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ حَدَّثَنَا أَبِي حَدَّثَنَا سَعِيدُ بْنُ عُبَيْدٍ حَدَّثَنَا عَلِيُّ بْنُ رَبِيعَةَ قَالَ أَتَيْتُ الْمَسْجِدَ وَالْمُغِيرَةُ أَمِيرُ الْكُوفَةِ قَالَ فَقَالَ الْمُغِيرَةُ</span><span class="se">\n</span><span class="s2">سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ إِنَّ كَذِبًا عَلَيَّ لَيْسَ كَكَذِبٍ عَلَى أَحَدٍ فَمَنْ كَذَبَ عَلَيَّ مُتَعَمِّدًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنْ النَّارِ</span><span class="se">\n</span><span class="s2">و حَدَّثَنِي عَلِيُّ بْنُ حُجْرٍ السَّعْدِيُّ حَدَّثَنَا عَلِيُّ بْنُ مُسْهِرٍ أَخْبَرَنَا مُحَمَّدُ بْنُ قَيْسٍ الْأَسْدِيُّ عَنْ عَلِيِّ بْنِ رَبِيعَةَ الْأَسَدِيِّ عَنْ الْمُغِيرَةِ بْنِ شُعْبَةَ عَنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِمِثْلِهِ وَلَمْ يَذْكُرْ إِنَّ كَذِبًا عَلَيَّ لَيْسَ كَكَذِبٍ عَلَى أَحَدٍ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin Abdullah bin Numair] telah menceritakan kepada kami [Bapakku] telah menceritakan kepada kami [Sa'id bin 'Ubaid] telah menceritakan kepada kami [Ali bin Rabi'ah] dia berkata, </span><span class="se">\"</span><span class="s2">Aku mendatangi masjid sedangkan al-Mughirah, gubernur Kufah. Ia berkata, </span><span class="se">\"</span><span class="s2">Lalu [al-Mughirah] berkata, 'Saya mendengar Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Sesungguhnya berdusta atas namaku tidaklah sama dengan berdusta atas nama seseorang, barangsiapa berdusta atas namaku secara sengaja maka hendaklah dia menempati tempat duduknya dari neraka.</span><span class="se">\"</span><span class="s2"> Dan telah menceritakan kepadaku [Ali bin Hujr as Sa'di] telah menceritakan kepada kami [Ali bin Mushir] telah mengabarkan kepada kami [Muhammad bin Qais al Asdi] dari [Ali bin Rabi'ah al Asdi] dari [al-Mughirah bin Syu'bah] dari Nabi shallallahu 'alaihi wasallam dengan semisal hadits tersebut, hanya saja dia tidak menyebut, </span><span class="se">\"</span><span class="s2">Sesungguhnya berdusta atas namaku tidaklah sama dengan berdusta atas nama seseorang.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24188</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ حَدَّثَنَا غُنْدَرٌ عَنْ شُعْبَةَ ح و حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى وَابْنُ بَشَّارٍ قَالَا حَدَّثَنَا مُحَمَّدُ بْنُ جَعْفَرٍ حَدَّثَنَا شُعْبَةُ عَنْ مَنْصُورٍ عَنْ رِبْعِيِّ بْنِ حِرَاشٍ أَنَّهُ سَمِعَ عَلِيًّا رَضِيَ اللَّهُ عَنْهُ يَخْطُبُ قَالَ</span><span class="se">\n</span><span class="s2">قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لَا تَكْذِبُوا عَلَيَّ فَإِنَّهُ مَنْ يَكْذِبْ عَلَيَّ يَلِجْ النَّارَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] telah menceritakan kepada kami [Ghundar] dari [Syu'bah] (dalam riwayat lain disebutkan) Dan telah menceritakan kepada kami [Muhammad bin al Mutsanna] dan [Ibnu Basysyar] keduanya berkata, telah menceritakan kepada kami [Muhammad bin Ja'far] telah menceritakan kepada kami [Syu'bah] dari [Manshur] dari [Rib'i bin Hirasy] bahwasanya dia mendengar [Ali] berkhuthbah, dia berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Janganlah kalian berdusta atas namaku, karena siapa yang berdusta atas namaku niscaya dia masuk neraka.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24189</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ الْعَنْبَرِيُّ حَدَّثَنَا أَبِي ح و حَدَّثَنَا مُحَمَّدُ بْنُ الْمُثَنَّى حَدَّثَنَا عَبْدُ الرَّحْمَنِ بْنُ مَهْدِيٍّ قَالَا حَدَّثَنَا شُعْبَةُ عَنْ خُبَيْبِ بْنِ عَبْدِ الرَّحْمَنِ عَنْ حَفْصِ بْنِ عَاصِمٍ قَالَ</span><span class="se">\n</span><span class="s2">قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ كَفَى بِالْمَرْءِ كَذِبًا أَنْ يُحَدِّثَ بِكُلِّ مَا سَمِعَ</span><span class="se">\n</span><span class="s2">و حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ حَدَّثَنَا عَلِيُّ بْنُ حَفْصٍ حَدَّثَنَا شُعْبَةُ عَنْ خُبَيْبِ بْنِ عَبْدِ الرَّحْمَنِ عَنْ حَفْصِ بْنِ عَاصِمٍ عَنْ أَبِي هُرَيْرَةَ عَنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِمِثْلِ ذَلِكَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan telah menceritakan kepada kami [Ubaidullah bin Mu'adz al Anbari] telah menceritakan kepada kami [Bapakku] (dalam riwayat lain disebutkan), Dan telah menceritakan kepada kami [Muhammad bin al Mutsanna] telah menceritakan kepada kami [Abdurrahman bin Mahdi] keduanya berkata, telah menceritakan kepada kami [Syu'bah] dari [Khubaib bin Abdurrahman] dari [Hafsh bin Ashim] dia berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Cukuplah seseorang (dianggap) berbohong apabila dia menceritakan semua yang dia dengarkan.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] telah menceritakan kepada kami [Ali bin Hafsh] telah menceritakan kepada kami [Syu'bah] dari [Khubaib bin Abdurrahman] dari [Hafsh bin 'Ashim] dari [Abu Hurairah] dari Nabi shallallahu 'alaihi wasallam dengan seperti hadits tersebut.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24190</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنِي مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ وَزُهَيْرُ بْنُ حَرْبٍ قَالَا حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يَزِيدَ قَالَ حَدَّثَنِي سَعِيدُ بْنُ أَبِي أَيُّوبَ قَالَ حَدَّثَنِي أَبُو هَانِئٍ عَنْ أَبِي عُثْمَانَ مُسْلِمِ بْنِ يَسَارٍ عَنْ أَبِي هُرَيْرَةَ</span><span class="se">\n</span><span class="s2">عَنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَنَّهُ قَالَ سَيَكُونُ فِي آخِرِ أُمَّتِي أُنَاسٌ يُحَدِّثُونَكُمْ مَا لَمْ تَسْمَعُوا أَنْتُمْ وَلَا آبَاؤُكُمْ فَإِيَّاكُمْ وَإِيَّاهُمْ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan telah menceritakan kepada kami [Muhammad bin Abdullah bin Numair] dan [Zuhair bin Harb] keduanya berkata, telah menceritakan kepada kami [Abdullah bin Yazid] dia berkata, telah menceritakan kepadaku [Sa'id bin Abu Ayyub] dia berkata, telah menceritakan kepadaku [Abu Hani'] dari [Abu Utsman Muslim bin Yasar] dari [Abu Hurairah] dari Rasulullah shallallahu 'alaihi wasallam, bahwasanya beliau bersabda: </span><span class="se">\"</span><span class="s2">Akan ada orang-orang pada akhir umatku menceritakan sebuah hadits kepada kalian yang mana kalian belum pernah mendengarnya dan tidak pula bapak kalian. Maka kalian jauhilah dan mereka jauhilah.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24191</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنِي حَرْمَلَةُ بْنُ يَحْيَى بْنِ عَبْدِ اللَّهِ بْنِ حَرْمَلَةَ بْنِ عِمْرَانَ التُّجِيبِيُّ قَالَ حَدَّثَنَا ابْنُ وَهْبٍ قَالَ حَدَّثَنِي أَبُو شُرَيْحٍ أَنَّهُ سَمِعَ شَرَاحِيلَ بْنَ يَزِيدَ يَقُولُ أَخْبَرَنِي مُسْلِمُ بْنُ يَسَارٍ أَنَّهُ سَمِعَ أَبَا هُرَيْرَةَ يَقُولُا</span><span class="se">\n</span><span class="s2">قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَكُونُ فِي آخِرِ الزَّمَانِ دَجَّالُونَ كَذَّابُونَ يَأْتُونَكُمْ مِنْ الْأَحَادِيثِ بِمَا لَمْ تَسْمَعُوا أَنْتُمْ وَلَا آبَاؤُكُمْ فَإِيَّاكُمْ وَإِيَّاهُمْ لَا يُضِلُّونَكُمْ وَلَا يَفْتِنُونَكُمْ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepadaku [Harmalah bin Yahya bin Abdullah bin Harmalah bin Imran at-Tujibi] dia telah berkata, telah menceritakan kepada kami [Ibnu Wahb] dia berkata, telah menceritakan kepada kami [Abu Syuraih] bahwa dia mendengar [Syarahil bin Yazid] berkata, telah mengabarkan kepadaku [Muslim bin Yasar] bahwa dia mendengar [Abu Hurairah] berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Akan ada di akhir zaman para Dajjal Pendusta membawa hadits-hadits kepada kalian yang mana kalian tidak pernah mendengarnya dan bapak-bapak kalian juga belum pernah mendengarnya. Maka kalian jauhilah dan mereka jauhilah. Mereka tidak bisa menyesatkan kalian dan tidak bisa memfitnah kalian.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24192</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ وَزُهَيْرُ بْنُ حَرْبٍ جَمِيعًا عَنْ ابْنِ عُلَيَّةَ قَالَ زُهَيْرٌ حَدَّثَنَا إِسْمَعِيلُ بْنُ إِبْرَاهِيمَ عَنْ أَبِي حَيَّانَ عَنْ أَبِي زُرْعَةَ بْنِ عَمْرِو بْنِ جَرِيرٍ عَنْ أَبِي هُرَيْرَةَ قَالَ</span><span class="se">\n</span><span class="s2">كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَوْمًا بَارِزًا لِلنَّاسِ فَأَتَاهُ رَجُلٌ فَقَالَ يَا رَسُولَ اللَّهِ مَا الْإِيمَانُ قَالَ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكِتَابِهِ وَلِقَائِهِ وَرُسُلِهِ وَتُؤْمِنَ بِالْبَعْثِ الْآخِرِ قَالَ يَا رَسُولَ اللَّهِ مَا الْإِسْلَامُ قَالَ الْإِسْلَامُ أَنْ تَعْبُدَ اللَّهَ وَلَا تُشْرِكَ بِهِ شَيْئًا وَتُقِيمَ الصَّلَاةَ الْمَكْتُوبَةَ وَتُؤَدِّيَ الزَّكَاةَ الْمَفْرُوضَةَ وَتَصُومَ رَمَضَانَ قَالَ يَا رَسُولَ اللَّهِ مَا الْإِحْسَانُ قَالَ أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ فَإِنَّكَ إِنْ لَا تَرَاهُ فَإِنَّهُ يَرَاكَ قَالَ يَا رَسُولَ اللَّهِ مَتَى السَّاعَةُ قَالَ مَا الْمَسْئُولُ عَنْهَا بِأَعْلَمَ مِنْ السَّائِلِ وَلَكِنْ سَأُحَدِّثُكَ عَنْ أَشْرَاطِهَا إِذَا وَلَدَتْ الْأَمَةُ رَبَّهَا فَذَاكَ مِنْ أَشْرَاطِهَا وَإِذَا كَانَتْ الْعُرَاةُ الْحُفَاةُ رُءُوسَ النَّاسِ فَذَاكَ مِنْ أَشْرَاطِهَا وَإِذَا تَطَاوَلَ رِعَاءُ الْبَهْمِ فِي الْبُنْيَانِ فَذَاكَ مِنْ أَشْرَاطِهَا فِي خَمْسٍ لَا يَعْلَمُهُنَّ إِلَّا اللَّهُ ثُمَّ تَلَا صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ</span><span class="se">\n</span><span class="s2">{ إِنَّ اللَّهَ عِنْدَهُ عِلْمُ السَّاعَةِ وَيُنَزِّلُ الْغَيْثَ وَيَعْلَمُ مَا فِي الْأَرْحَامِ وَمَا تَدْرِي نَفْسٌ مَاذَا تَكْسِبُ غَدًا وَمَا تَدْرِي نَفْسٌ بِأَيِّ أَرْضٍ تَمُوتُ إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ }</span><span class="se">\n</span><span class="s2">قَالَ ثُمَّ أَدْبَرَ الرَّجُلُ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ رُدُّوا عَلَيَّ الرَّجُلَ فَأَخَذُوا لِيَرُدُّوهُ فَلَمْ يَرَوْا شَيْئًا فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ هَذَا جِبْرِيلُ جَاءَ لِيُعَلِّمَ النَّاسَ دِينَهُمْ</span><span class="se">\n</span><span class="s2">حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ حَدَّثَنَا مُحَمَّدُ بْنُ بِشْرٍ حَدَّثَنَا أَبُو حَيَّانَ التَّيْمِيُّ بِهَذَا الْإِسْنَادِ مِثْلَهُ غَيْرَ أَنَّ فِي رِوَايَتِهِ إِذَا وَلَدَتْ الْأَمَةُ بَعْلَهَا يَعْنِي السَّرَارِيَّ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dan telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] dan [Zuhair bin Harb] semuanya dari [Ibnu Ulayyah], [Zuhair] berkata, telah menceritakan kepada kami [Ismail bin Ibrahim] dari [Abu Hayyan] dari [Abu Zur'ah bin Amru bin Jarir] dari [Abu Hurairah] dia berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam pada suatu hari berada di hadapan manusia, lalu seorang laki-laki mendatanginya seraya berkata, 'Wahai Rasulullah, apakah iman itu? ' Beliau menjawab, 'Kamu beriman kepada Allah, malaikat-Nya, kitab-Nya, beriman kepada kejadian pertemuan dengan-Nya, beriman kepada para Rasul-Nya, dan kamu beriman kepada hari kebangkitan yang akhir'. Dia bertanya, 'Wahai Rasulullah, apakah Islam itu? ' Beliau menjawab, 'Islam adalah kamu menyembah Allah dan tidak menyekutukan-Nya dengan sesuatu apa pun, mendirikan shalat yang wajib, membayar zakat yang difardlukan, dan berpuasa Ramadlan.' Dia bertanya lagi, 'Wahai Rasulullah, apakah ihsan itu? ' Beliau menjawab, 'Kamu menyembah Allah seakan-akan kamu melihat-Nya, maka jika kamu tidak melihat-Nya maka sesungguhnya Dia melihatmu.' Dia bertanya lagi, 'Wahai Rasulullah, kapankah hari kiamat itu? ' Beliau menjawab, 'Tidaklah orang yang ditanya tentangnya lebih mengetahui jawaban-Nya daripada orang yang bertanya, akan tetapi aku akan menceritakan kepadamu tentang tanda-tandanya; yaitu bila hamba wanita melahirkan tuan-Nya. Itulah salah satu tanda-tandanya. (Kedua) bila orang yang telanjang tanpa alas kaki menjadi pemimpin manusia. Itulah salah satu tanda-tandanya. (Ketiga) apabila penggembala kambing saling berlomba tinggi-tinggian dalam (mendirikan) bangunan. Itulah salah satu tanda-tandanya dalam lima tanda-tanda, tidak ada yang mengetahuinya kecuali Allah, </span><span class="se">\"</span><span class="s2"> kemudian beliau shallallahu 'alaihi wasallam membaca: '(Sesungguhnya Allah, hanya pada sisi-Nya sajalah pengetahuan tentang Hari Kiamat; dan Dia-lah Yang menurunkan hujan, dan mengetahui apa yang ada dalam rahim.Dan tiada seorangpun yang dapat mengetahui (dengan pasti) apa yang akan diusahakan-Nya besok.Dan tiada seorangpun yang dapat mengetahui di bumi mana dia akan mati. Sesungguhnya Allah Maha Mengetahui lagi Maha Mengenal) ' (Qs. Luqman: 34). Kemudian laki-laki tersebut kembali pergi. Maka Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Panggil kembali laki-laki tersebut menghadapku'. Maka mereka mulai memanggilnya lagi, namun mereka tidak melihat sesuatu pun. Maka Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Ini Jibril, dia datang untuk mengajarkan manusia tentang agama mereka'.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Muhammad bin Abdullah bin Numair] telah menceritakan kepada kami [Muhammad bin Bisyr] telah menceritakan kepada kami [Abu Hayyan at-Taimi] dengan sanad ini hadits semisalnya, hanya saja dalam riwayatnya ada kalimat, 'Apabila hamba wanita melahirkan suaminya, yaitu para gundik'."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24193</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ حَدَّثَنَا جَرِيرٌ عَنْ عُمَارَةَ وَهُوَ ابْنُ الْقَعْقَاعِ عَنْ أَبِي زُرْعَةَ عَنْ أَبِي هُرَيْرَةَ قَالَ</span><span class="se">\n</span><span class="s2">قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ سَلُونِي فَهَابُوهُ أَنْ يَسْأَلُوهُ فَجَاءَ رَجُلٌ فَجَلَسَ عِنْدَ رُكْبَتَيْهِ فَقَالَ يَا رَسُولَ اللَّهِ مَا الْإِسْلَامُ قَالَ لَا تُشْرِكُ بِاللَّهِ شَيْئًا وَتُقِيمُ الصَّلَاةَ وَتُؤْتِي الزَّكَاةَ وَتَصُومُ رَمَضَانَ قَالَ صَدَقْتَ قَالَ يَا رَسُولَ اللَّهِ مَا الْإِيمَانُ قَالَ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكِتَابِهِ وَلِقَائِهِ وَرُسُلِهِ وَتُؤْمِنَ بِالْبَعْثِ وَتُؤْمِنَ بِالْقَدَرِ كُلِّهِ قَالَ صَدَقْتَ قَالَ يَا رَسُولَ اللَّهِ مَا الْإِحْسَانُ قَالَ أَنْ تَخْشَى اللَّهَ كَأَنَّكَ تَرَاهُ فَإِنَّكَ إِنْ لَا تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ قَالَ صَدَقْتَ قَالَ يَا رَسُولَ اللَّهِ مَتَى تَقُومُ السَّاعَةُ قَالَ مَا الْمَسْئُولُ عَنْهَا بِأَعْلَمَ مِنْ السَّائِلِ وَسَأُحَدِّثُكَ عَنْ أَشْرَاطِهَا إِذَا رَأَيْتَ الْمَرْأَةَ تَلِدُ رَبَّهَا فَذَاكَ مِنْ أَشْرَاطِهَا وَإِذَا رَأَيْتَ الْحُفَاةَ الْعُرَاةَ الصُّمَّ الْبُكْمَ مُلُوكَ الْأَرْضِ فَذَاكَ مِنْ أَشْرَاطِهَا وَإِذَا رَأَيْتَ رِعَاءَ الْبَهْمِ يَتَطَاوَلُونَ فِي الْبُنْيَانِ فَذَاكَ مِنْ أَشْرَاطِهَا فِي خَمْسٍ مِنْ الْغَيْبِ لَا يَعْلَمُهُنَّ إِلَّا اللَّهُ ثُمَّ قَرَأَ</span><span class="se">\n</span><span class="s2">{ إِنَّ اللَّهَ عِنْدَهُ عِلْمُ السَّاعَةِ وَيُنَزِّلُ الْغَيْثَ وَيَعْلَمُ مَا فِي الْأَرْحَامِ وَمَا تَدْرِي نَفْسٌ مَاذَا تَكْسِبُ غَدًا وَمَا تَدْرِي نَفْسٌ بِأَيِّ أَرْضٍ تَمُوتُ إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ }</span><span class="se">\n</span><span class="s2">قَالَ ثُمَّ قَامَ الرَّجُلُ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ رُدُّوهُ عَلَيَّ فَالْتُمِسَ فَلَمْ يَجِدُوهُ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ هَذَا جِبْرِيلُ أَرَادَ أَنْ تَعَلَّمُوا إِذْ لَمْ تَسْأَلُوا"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Zuhair bin Harb] telah menceritakan kepada kami [Jarir] dari [Umarah] -yaitu Ibnu al-Qa'qa'- dari [Abu Zur'ah] dari [Abu Hurairah] dia berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda: 'Kalian bertanyalah kepadaku'. Namun mereka takut dan segan untuk bertanya kepada beliau. Maka seorang laki-laki datang lalu duduk di hadapan kedua lutut beliau, laki-laki itu bertanya, 'Wahai Rasulullah, apakah Islam itu? ' Beliau menjawab, 'Islam adalah kamu tidak menyekutukan Allah dengan sesuatu apa pun, mendirikan shalat, membayar zakat, dan berpuasa Ramadlan.' Dia berkata, 'Kamu benar.' Lalu dia bertanya lagi, 'Wahai Rasulullah, apakah iman itu? ' Beliau menjawab, 'Kamu beriman kepada Allah, malaikat-Nya, kitab-Nya, beriman kepada kejadian pertemuan dengan-Nya, beriman kepada para Rasul-Nya, dan kamu beriman kepada hari kebangkitan serta beriman kepada takdir semuanya'. Dia berkata, 'Kamu benar'. Lalu dia bertanya lagi, 'Wahai Rasulullah, apakah ihsan itu? ' Beliau menjawab, 'Kamu takut (khasyyah) kepada Allah seakan-akan kamu melihat-Nya, maka jika kamu tidak melihat-Nya maka sesungguhnya Dia melihatmu.' Dia berkata, 'Kamu benar'. Lalu dia bertanya lagi, 'Wahai Rasulullah, kapankah hari kiamat itu? ' Beliau menjawab, 'Tidaklah orang yang ditanya tentangnya lebih mengetahui jawaban-Nya daripada orang yang bertanya, akan tetapi aku akan menceritakan kepadamu tentang tanda-tandanya; yaitu bila kamu melihat hamba wanita melahirkan tuan-Nya. Itulah salah satu tanda-tandanya. (Kedua) bila kamu melihat orang yang tanpa alas kaki telanjang, tuli, bisu menjadi pemimpin (manusia) di bumi. Itulah salah satu tanda-tandanya. (Ketiga) apabila kamu melihat penggembala kambing saling berlomba tinggi-tinggian dalam (mendirikan) bangunan. Itulah salah satu tanda-tandanya dalam lima tanda-tanda dari kegaiban, tidak ada yang mengetahuinya kecuali Allah, </span><span class="se">\"</span><span class="s2"> kemudian beliau membaca: '(Sesungguhnya Allah, hanya pada sisi-Nya sajalah pengetahuan tentang Hari Kiamat; dan Dia-lah Yang menurunkan hujan, dan mengetahui apa yang ada dalam rahim.Dan tiada seorangpun yang dapat mengetahui (dengan pasti) apa yang akan diusahakan-Nya besok. Dan tiada seorangpun yang dapat mengetahui di bumi mana dia akan mati.Sesungguhnya Allah Maha Mengetahui lagi Maha Mengenal) </span><span class="se">\"</span><span class="s2"> (Qs. Luqman: 34). Kemudian laki-laki tersebut bangun (mengundurkan diri), maka Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Panggillah dia menghadapku! ' Maka dia dicari, namun mereka tidak mendapatkan-Nya. Maka Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Laki-laki ini adalah Jibril yang berkeinginan agar kalian mempelajari (agama) karena kalian tidak bertanya'.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24194</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"حَدَّثَنِي أَبُو خَيْثَمَةَ زُهَيْرُ بْنُ حَرْبٍ حَدَّثَنَا وَكِيعٌ عَنْ كَهْمَسٍ عَنْ عَبْدِ اللَّهِ بْنِ بُرَيْدَةَ عَنْ يَحْيَى بْنِ يَعْمَرَ ح و حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ مُعَاذٍ الْعَنْبَرِيُّ وَهَذَا حَدِيثُهُ حَدَّثَنَا أَبِي حَدَّثَنَا كَهْمَسٌ عَنْ ابْنِ بُرَيْدَةَ عَنْ يَحْيَى بْنِ يَعْمَرَ قَالَ كَانَ أَوَّلَ مَنْ قَالَ فِي الْقَدَرِ بِالْبَصْرَةِ مَعْبَدٌ الْجُهَنِيُّ فَانْطَلَقْتُ أَنَا وَحُمَيْدُ بْنُ عَبْدِ الرَّحْمَنِ الْحِمْيَرِيُّ حَاجَّيْنِ أَوْ مُعْتَمِرَيْنِ فَقُلْنَا لَوْ لَقِينَا أَحَدًا مِنْ أَصْحَابِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَسَأَلْنَاهُ عَمَّا يَقُولُ هَؤُلَاءِ فِي الْقَدَرِ فَوُفِّقَ لَنَا عَبْدُ اللَّهِ بْنُ عُمَرَ بْنِ الْخَطَّابِ دَاخِلًا الْمَسْجِدَ فَاكْتَنَفْتُهُ أَنَا وَصَاحِبِي أَحَدُنَا عَنْ يَمِينِهِ وَالْآخَرُ عَنْ شِمَالِهِ فَظَنَنْتُ أَنَّ صَاحِبِي سَيَكِلُ الْكَلَامَ إِلَيَّ فَقُلْتُ أَبَا عَبْدِ الرَّحْمَنِ إِنَّهُ قَدْ ظَهَرَ قِبَلَنَا نَاسٌ يَقْرَءُونَ الْقُرْآنَ وَيَتَقَفَّرُونَ الْعِلْمَ وَذَكَرَ مِنْ شَأْنِهِمْ وَأَنَّهُمْ يَزْعُمُونَ أَنْ لَا قَدَرَ وَأَنَّ الْأَمْرَ أُنُفٌ قَالَ فَإِذَا لَقِيتَ أُولَئِكَ فَأَخْبِرْهُمْ أَنِّي بَرِيءٌ مِنْهُمْ وَأَنَّهُمْ بُرَآءُ مِنِّي وَالَّذِي يَحْلِفُ بِهِ عَبْدُ اللَّهِ بْنُ عُمَرَ لَوْ أَنَّ لِأَحَدِهِمْ مِثْلَ أُحُدٍ ذَهَبًا فَأَنْفَقَهُ مَا قَبِلَ اللَّهُ مِنْهُ حَتَّى يُؤْمِنَ بِالْقَدَرِ</span><span class="se">\n</span><span class="s2">ثُمَّ قَالَ حَدَّثَنِي أَبِي عُمَرُ بْنُ الْخَطَّابِ قَالَ بَيْنَمَا نَحْنُ عِنْدَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ذَاتَ يَوْمٍ إِذْ طَلَعَ عَلَيْنَا رَجُلٌ شَدِيدُ بَيَاضِ الثِّيَابِ شَدِيدُ سَوَادِ الشَّعَرِ لَا يُرَى عَلَيْهِ أَثَرُ السَّفَرِ وَلَا يَعْرِفُهُ مِنَّا أَحَدٌ حَتَّى جَلَسَ إِلَى النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَأَسْنَدَ رُكْبَتَيْهِ إِلَى رُكْبَتَيْهِ وَوَضَعَ كَفَّيْهِ عَلَى فَخِذَيْهِ وَقَالَ يَا مُحَمَّدُ أَخْبِرْنِي عَنْ الْإِسْلَامِ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ الْإِسْلَامُ أَنْ تَشْهَدَ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَتُقِيمَ الصَّلَاةَ وَتُؤْتِيَ الزَّكَاةَ وَتَصُومَ رَمَضَانَ وَتَحُجَّ الْبَيْتَ إِنْ اسْتَطَعْتَ إِلَيْهِ سَبِيلًا قَالَ صَدَقْتَ قَالَ فَعَجِبْنَا لَهُ يَسْأَلُهُ وَيُصَدِّقُهُ قَالَ فَأَخْبِرْنِي عَنْ الْإِيمَانِ قَالَ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ قَالَ صَدَقْتَ قَالَ فَأَخْبِرْنِي عَنْ الْإِحْسَانِ قَالَ أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ قَالَ فَأَخْبِرْنِي عَنْ السَّاعَةِ قَالَ مَا الْمَسْئُولُ عَنْهَا بِأَعْلَمَ مِنْ السَّائِلِ قَالَ فَأَخْبِرْنِي عَنْ أَمَارَتِهَا قَالَ أَنْ تَلِدَ الْأَمَةُ رَبَّتَهَا وَأَنْ تَرَى الْحُفَاةَ الْعُرَاةَ الْعَالَةَ رِعَاءَ الشَّاءِ يَتَطَاوَلُونَ فِي الْبُنْيَانِ قَالَ ثُمَّ انْطَلَقَ فَلَبِثْتُ مَلِيًّا ثُمَّ قَالَ لِي يَا عُمَرُ أَتَدْرِي مَنْ السَّائِلُ قُلْتُ اللَّهُ وَرَسُولُهُ أَعْلَمُ قَالَ فَإِنَّهُ جِبْرِيلُ أَتَاكُمْ يُعَلِّمُكُمْ دِينَكُمْ</span><span class="se">\n</span><span class="s2">حَدَّثَنِي مُحَمَّدُ بْنُ عُبَيْدٍ الْغُبَرِيُّ وَأَبُو كَامِلٍ الْجَحْدَرِيُّ وَأَحْمَدُ بْنُ عَبْدَةَ قَالُوا حَدَّثَنَا حَمَّادُ بْنُ زَيْدٍ عَنْ مَطَرٍ الْوَرَّاقِ عَنْ عَبْدِ اللَّهِ بْنِ بُرَيْدَةَ عَنْ يَحْيَى بْنِ يَعْمَرَ قَالَ لَمَّا تَكَلَّمَ مَعْبَدٌ بِمَا تَكَلَّمَ بِهِ فِي شَأْنِ الْقَدَرِ أَنْكَرْنَا ذَلِكَ قَالَ فَحَجَجْتُ أَنَا وَحُمَيْدُ بْنُ عَبْدِ الرَّحْمَنِ الْحِمْيَرِيُّ حَجَّةً وَسَاقُوا الْحَدِيثَ بِمَعْنَى حَدِيثِ كَهْمَسٍ وَإِسْنَادِهِ وَفِيهِ بَعْضُ زِيَادَةٍ وَنُقْصَانُ أَحْرُفٍ و حَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ حَدَّثَنَا يَحْيَى بْنُ سَعِيدٍ الْقَطَّانُ حَدَّثَنَا عُثْمَانُ بْنُ غِيَاثٍ حَدَّثَنَا عَبْدُ اللَّهِ بْنُ بُرَيْدَةَ عَنْ يَحْيَى بْنِ يَعْمَرَ وَحُمَيْدِ بْنِ عَبْدِ الرَّحْمَنِ قَالَا لَقِينَا عَبْدَ اللَّهِ بْنَ عُمَرَ فَذَكَرْنَا الْقَدَرَ وَمَا يَقُولُونَ فِيهِ فَاقْتَصَّ الْحَدِيثَ كَنَحْوِ حَدِيثِهِمْ عَنْ عُمَرَ رَضِيَ اللَّهُ عَنْهُ عَنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَفِيهِ شَيْءٌ مِنْ زِيَادَةٍ وَقَدْ نَقَصَ مِنْهُ شَيْئًا و حَدَّثَنِي حَجَّاجُ بْنُ الشَّاعِرِ حَدَّثَنَا يُونُسُ بْنُ مُحَمَّدٍ حَدَّثَنَا الْمُعْتَمِرُ عَنْ أَبِيهِ عَنْ يَحْيَى بْنِ يَعْمَرَ عَنْ ابْنِ عُمَرَ عَنْ عُمَرَ عَنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِنَحْوِ حَدِيثِهِمْ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepadaku [Abu Khaitsamah Zuhair bin Harb] telah menceritakan kepada kami [Waki'] dari [Kahmas] dari [Abdullah bin Buraidah] dari [Yahya bin Ya'mar]. (dalam riwayat lain disebutkan) Dan telah menceritakan kepada kami [Ubaidullah bin Mu'adz al-'Anbari] dan ini haditsnya, telah menceritakan kepada kami [Bapakku] telah menceritakan kepada kami [Kahmas] dari [Ibnu Buraidah] dari [Yahya bin Ya'mar] dia berkata, </span><span class="se">\"</span><span class="s2">Orang yang pertama kali membahas takdir di Bashrah adalah Ma'bad al-Juhani, maka aku dan Humaid bin Abdurrahman al-Himyari bertolak haji atau umrah, maka kami berkata, 'Seandainya kami bertemu dengan salah seorang sahabat Rasulullah shallallahu 'alaihi wasallam, maka kami akan bertanya kepadanya tentang sesuatu yang mereka katakan berkaitan dengan takdir.' Maka [Abdullah bin Umar] diberikan taufik (oleh Allah) untuk kami, sedangkan dia masuk masjid. Lalu aku dan temanku menghadangnya. Salah seorang dari kami di sebelah kanannya dan yang lain di sebelah kirinya. Lalu aku mengira bahwa temanku akan mewakilkan pembicaraan kepadaku, maka aku berkata, 'Wahai Abu Abdurrahman, sesungguhnya nampak di hadapan kami suatu kaum membaca al-Qur'an dan mencari ilmu lalu mengklaim bahwa tidak ada takdir, dan perkaranya adalah baru (tidak didahului oleh takdir dan ilmu Allah).' Maka [Abdullah bin Umar] menjawab, 'Apabila kamu bertemu orang-orang tersebut, maka kabarkanlah kepada mereka bahwa saya berlepas diri dari mereka, dan bahwa mereka berlepas diri dariku. Dan demi Dzat yang mana hamba Allah bersumpah dengan-Nya, kalau seandainya salah seorang dari kalian menafkahkan emas seperti gunung Uhud, niscaya sedekahnya tidak akan diterima hingga dia beriman kepada takdir baik dan buruk.' Dia berkata, 'Kemudian dia mulai menceritakan hadits seraya berkata, ['Umar bin al-Khaththab] berkata, 'Dahulu kami pernah berada di sisi Rasulullah shallallahu 'alaihi wasallam, lalu datanglah seorang laki-laki yang bajunya sangat putih, rambutnya sangat hitam, tidak tampak padanya bekas-bekas perjalanan. Tidak seorang pun dari kami mengenalnya, hingga dia mendatangi Nabi Shallallahu 'Alaihi Wasalam lalu menyandarkan lututnya pada lutut Nabi Shallallahu 'Alaihi Wasalam, kemudian ia berkata, 'Wahai Muhammad, kabarkanlah kepadaku tentang Islam? ' Rasulullah Shallallahu 'Alaihi Wasalam menjawab: </span><span class="se">\"</span><span class="s2">Kesaksian bahwa tidak ada tuhan (yang berhak disembah) selain Allah dan bahwa Muhammad adalah hamba dan utusan-Nya, mendirikan shalat, menunaikan zakat, dan puasa Ramadlan, serta haji ke Baitullah jika kamu mampu bepergian kepadanya.' Dia berkata, 'Kamu benar.' Umar berkata, 'Maka kami kaget terhadapnya karena dia menanyakannya dan membenarkannya.' Dia bertanya lagi, 'Kabarkanlah kepadaku tentang iman itu? ' Beliau menjawab: </span><span class="se">\"</span><span class="s2">Kamu beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya, para Rasul-Nya, hari akhir, dan takdir baik dan buruk.</span><span class="se">\"</span><span class="s2"> Dia berkata, 'Kamu benar.' Dia bertanya, 'Kabarkanlah kepadaku tentang ihsan itu? ' Beliau menjawab: </span><span class="se">\"</span><span class="s2">Kamu menyembah Allah seakan-akan kamu melihat-Nya, maka jika kamu tidak melihat-Nya, maka sesungguhnya Dia melihatmu.</span><span class="se">\"</span><span class="s2"> Dia bertanya lagi, 'Kapankah hari akhir itu? ' Beliau menjawab: </span><span class="se">\"</span><span class="s2">Tidaklah orang yang ditanya itu lebih mengetahui daripada orang yang bertanya.</span><span class="se">\"</span><span class="s2"> Dia bertanya, 'Lalu kabarkanlah kepadaku tentang tanda-tandanya? ' Beliau menjawab: </span><span class="se">\"</span><span class="s2">Apabila seorang budak melahirkan (anak) tuan-Nya, dan kamu melihat orang yang tidak beralas kaki, telanjang, miskin, penggembala kambing, namun bermegah-megahan dalam membangun bangunan.</span><span class="se">\"</span><span class="s2"> Kemudian dia bertolak pergi. Maka aku tetap saja heran kemudian beliau berkata; </span><span class="se">\"</span><span class="s2">Wahai Umar, apakah kamu tahu siapa penanya tersebut?</span><span class="se">\"</span><span class="s2"> Aku menjawab, 'Allah dan Rasul-Nya lebih tahu.' Beliau bersabda: </span><span class="se">\"</span><span class="s2">Itulah jibril, dia mendatangi kalian untuk mengajarkan kepada kalian tentang pengetahuan agama kalian'.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Muhammad bin Ubaid al-Ghubari] dan [Abu Kamil al-Jahdari] serta [Ahmad bin Abdah] mereka berkata, telah menceritakan kepada kami [Hammad bin Yazid] dari [Mathar al Warraq] dari [Abdullah bin Buraidah] dari [Yahya bin Ya'mar] dia berkata, 'Ketika Ma'bad berkata dengan sesuatu yang dia bicarakan tentang masalah takdir, maka kami mengingkari hal tersebut.' Dia berkata lagi, 'Lalu aku melakukan haji bersama Humaid bin Abdurrahman al-Himyari.' Lalu mereka menyebutkan hadits dengan makna hadits Kahmas. Di dalamnya terdapat sebagian tambahan dan kekurangan huruf.</span><span class="se">\"</span><span class="s2"> Dan telah menceritakan kepada kami [Muhammad bin Hatim] telah menceritakan kepada kami [Yahya bin Sa'id al Qaththan] telah menceritakan kepada kami [Utsman bin Ghiyats] telah menceritakan kepada kami [Abdullah bin Buraidah] dari [Yahya bin Ya'mar] dan [Humaid bin Abdurrahman] keduanya berkata, </span><span class="se">\"</span><span class="s2">Kami bertemu [Abdullah bin Umar], lalu kami menyebutkan tentang takdir dan pendapat mereka tentangnya, lalu dia mengisahkan hadits tersebut sebagaimana hadits mereka dari [Umar] radlialllahu 'anhuma dari Nabi shallallahu 'alaihi wasallam, dan di dalamnya terdapat suatu tambahan dan pengurangan.</span><span class="se">\"</span><span class="s2"> Dan telah menceritakan kepada kami [Hajjaj bin asy-Sya'ir] telah menceritakan kepada kami [Yunus bin Muhammad] telah menceritakan kepada kami [al-Mu'tamir] dari [Bapaknya] dari [Yahya bin Ya'mar] dari [Ibnu Umar] dari [Umar] dari Nabi shallallahu 'alaihi wasallam dengan semisal hadits mereka.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24195</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"حَدَّثَنَا قُتَيْبَةُ بْنُ سَعِيدِ بْنِ جَمِيلِ بْنِ طَرِيفِ بْنِ عَبْدِ اللَّهِ الثَّقَفِيُّ عَنْ مَالِكِ بْنِ أَنَسٍ فِيمَا قُرِئَ عَلَيْهِ عَنْ أَبِي سُهَيْلٍ عَنْ أَبِيهِ أَنَّهُ سَمِعَ طَلْحَةَ بْنَ عُبَيْدِ اللَّهِ يَقُولُا</span><span class="se">\n</span><span class="s2">جَاءَ رَجُلٌ إِلَى رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مِنْ أَهْلِ نَجْدٍ ثَائِرُ الرَّأْسِ نَسْمَعُ دَوِيَّ صَوْتِهِ وَلَا نَفْقَهُ مَا يَقُولُ حَتَّى دَنَا مِنْ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَإِذَا هُوَ يَسْأَلُ عَنْ الْإِسْلَامِ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ خَمْسُ صَلَوَاتٍ فِي الْيَوْمِ وَاللَّيْلَةِ فَقَالَ هَلْ عَلَيَّ غَيْرُهُنَّ قَالَ لَا إِلَّا أَنْ تَطَّوَّعَ وَصِيَامُ شَهْرِ رَمَضَانَ فَقَالَ هَلْ عَلَيَّ غَيْرُهُ فَقَالَ لَا إِلَّا أَنْ تَطَّوَّعَ وَذَكَرَ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ الزَّكَاةَ فَقَالَ هَلْ عَلَيَّ غَيْرُهَا قَالَ لَا إِلَّا أَنْ تَطَّوَّعَ قَالَ فَأَدْبَرَ الرَّجُلُ وَهُوَ يَقُولُ وَاللَّهِ لَا أَزِيدُ عَلَى هَذَا وَلَا أَنْقُصُ مِنْهُ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَفْلَحَ إِنْ صَدَقَ</span><span class="se">\n</span><span class="s2">حَدَّثَنِي يَحْيَى بْنُ أَيُّوبَ وَقُتَيْبَةُ بْنُ سَعِيدٍ جَمِيعًا عَنْ إِسْمَعِيلَ بْنِ جَعْفَرٍ عَنْ أَبِي سُهَيْلٍ عَنْ أَبِيهِ عَنْ طَلْحَةَ بْنِ عُبَيْدِ اللَّهِ عَنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِهَذَا الْحَدِيثِ نَحْوَ حَدِيثِ مَالِكٍ غَيْرَ أَنَّهُ قَالَ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَفْلَحَ وَأَبِيهِ إِنْ صَدَقَ أَوْ دَخَلَ الْجَنَّةَ وَأَبِيهِ إِنْ صَدَقَ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Qutaibah bin Sa'id bin Jamil bin Tharif bin Abdullah ats-Tsaqafi] dari [Malik bin Anas] dalam riwayat yang dibacakan atasnya, dari [Abu Suhail] dari [bapaknya] bahwa dia mendengar [Thalhah bin Ubaidullah] berkata, </span><span class="se">\"</span><span class="s2">Seorang laki-laki dari penduduk Nejd yang rambutnya berdiri datang kepada Rasulullah shallallahu 'alaihi wasallam, kami mendengar gumaman suaranya, namun kami tidak dapat memahami sesuatu yang dia ucapkan hingga dia dekat dari Rasulullah shallallahu 'alaihi wasallam, ternyata dia bertanya tentang Islam. Maka Rasulullah shallallahu 'alaihi wasallam menjawab: 'Islam adalah shalat lima waktu siang dan malam.' Dia bertanya lagi, 'Apakah saya masih mempunyai kewajiban selain-Nya? ' Beliau menjawab: 'Tidak, kecuali kamu melakukan shalat sunnah dan puasa Ramadlan.' Dia bertanya, 'Apakah saya masih mempunyai kewajiban selain-Nya? ' Beliau menjawab: 'Tidak, kecuali kamu melakukan puasa sunnah, dan Rasulullah shallallahu 'alaihi wasallam menyebutkan (kewajiban) zakat kepadanya.' Dia bertanya lagi, 'Apakah saya masih mempunyai kewajiban selain-Nya? ' Beliau menjawab: 'Tidak, kecuali kamu melakukan sedekah sunnah'.</span><span class="se">\"</span><span class="s2"> Perawi berkata, </span><span class="se">\"</span><span class="s2">Lalu laki-laki tersebut mengundurkan diri pamit sedangkan dia berkata, 'Demi Allah, aku tidak akan menambahkan lebih dari ini dan tidak pula mengurangi darinya'. Maka Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Dia akan bahagia jika benar (melakukan-Nya) '.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Yahya bin Ayyub] dan [Qutaibah bin Sa'id] semuanya dari [Ismail bin Ja'far] dari [Abu Suhail] dari [bapaknya] dari [Thalhah bin Ubaidullah] dari Nabi shallallahu 'alaihi wasallam dengan hadits ini seperti hadits Malik, hanya saja dia berkata, </span><span class="se">\"</span><span class="s2">Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Dia akan bahagia, -demi bapaknya- jika dia benar', atau dia akan masuk surga, -demi bapaknya- jika dia benar'.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24196</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"حَدَّثَنِي عَمْرُو بْنُ مُحَمَّدِ بْنِ بُكَيْرٍ النَّاقِدُ حَدَّثَنَا هَاشِمُ بْنُ الْقَاسِمِ أَبُو النَّضْرِ حَدَّثَنَا سُلَيْمَانُ بْنُ الْمُغِيرَةِ عَنْ ثَابِتٍ عَنْ أَنَسِ بْنِ مَالِكٍ قَالَ</span><span class="se">\n</span><span class="s2">نُهِينَا أَنْ نَسْأَلَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنْ شَيْءٍ فَكَانَ يُعْجِبُنَا أَنْ يَجِيءَ الرَّجُلُ مِنْ أَهْلِ الْبَادِيَةِ الْعَاقِلُ فَيَسْأَلَهُ وَنَحْنُ نَسْمَعُ فَجَاءَ رَجُلٌ مِنْ أَهْلِ الْبَادِيَةِ فَقَالَ يَا مُحَمَّدُ أَتَانَا رَسُولُكَ فَزَعَمَ لَنَا أَنَّكَ تَزْعُمُ أَنَّ اللَّهَ أَرْسَلَكَ قَالَ صَدَقَ قَالَ فَمَنْ خَلَقَ السَّمَاءَ قَالَ اللَّهُ قَالَ فَمَنْ خَلَقَ الْأَرْضَ قَالَ اللَّهُ قَالَ فَمَنْ نَصَبَ هَذِهِ الْجِبَالَ وَجَعَلَ فِيهَا مَا جَعَلَ قَالَ اللَّهُ قَالَ فَبِالَّذِي خَلَقَ السَّمَاءَ وَخَلَقَ الْأَرْضَ وَنَصَبَ هَذِهِ الْجِبَالَ آللَّهُ أَرْسَلَكَ قَالَ نَعَمْ قَالَ وَزَعَمَ رَسُولُكَ أَنَّ عَلَيْنَا خَمْسَ صَلَوَاتٍ فِي يَوْمِنَا وَلَيْلَتِنَا قَالَ صَدَقَ قَالَ فَبِالَّذِي أَرْسَلَكَ آللَّهُ أَمَرَكَ بِهَذَا قَالَ نَعَمْ قَالَ وَزَعَمَ رَسُولُكَ أَنَّ عَلَيْنَا زَكَاةً فِي أَمْوَالِنَا قَالَ صَدَقَ قَالَ فَبِالَّذِي أَرْسَلَكَ آللَّهُ أَمَرَكَ بِهَذَا قَالَ نَعَمْ قَالَ وَزَعَمَ رَسُولُكَ أَنَّ عَلَيْنَا صَوْمَ شَهْرِ رَمَضَانَ فِي سَنَتِنَا قَالَ صَدَقَ قَالَ فَبِالَّذِي أَرْسَلَكَ آللَّهُ أَمَرَكَ بِهَذَا قَالَ نَعَمْ قَالَ وَزَعَمَ رَسُولُكَ أَنَّ عَلَيْنَا حَجَّ الْبَيْتِ مَنْ اسْتَطَاعَ إِلَيْهِ سَبِيلًا قَالَ صَدَقَ قَالَ ثُمَّ وَلَّى قَالَ وَالَّذِي بَعَثَكَ بِالْحَقِّ لَا أَزِيدُ عَلَيْهِنَّ وَلَا أَنْقُصُ مِنْهُنَّ فَقَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لَئِنْ صَدَقَ لَيَدْخُلَنَّ الْجَنَّةَ</span><span class="se">\n</span><span class="s2">حَدَّثَنِي عَبْدُ اللَّهِ بْنُ هَاشِمٍ الْعَبْدِيُّ حَدَّثَنَا بَهْزٌ حَدَّثَنَا سُلَيْمَانُ بْنُ الْمُغِيرَةِ عَنْ ثَابِتٍ قَالَ قَالَ أَنَسٌ كُنَّا نُهِينَا فِي الْقُرْآنِ أَنْ نَسْأَلَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنْ شَيْءٍ وَسَاقَ الْحَدِيثَ بِمِثْلِهِ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Amru bin Muhammad bin Bukair an-Naqid] telah menceritakan kepada kami [Hasyim bin al-Qasim Abu an-Nadlr] telah menceritakan kepada kami [Sulaiman bin al-Mughirah] dari [Tsabit] dari [Anas bin Malik] dia berkata, </span><span class="se">\"</span><span class="s2">Kami terhalangi untuk bertanya kepada Rasulullah shallallahu 'alaihi wasallam tentang sesuatu, yaitu kekaguman kami terhadap kedatangan seorang laki-laki dari penduduk gurun yang berakal (cerdas), lalu dia bertanya, sedangkan kami mendengarnya, lalu seorang laki-laki dari penduduk gurun datang seraya berkata, 'Wahai Muhammad, utusanmu mendatangi kami, lalu mengklaim untuk kami bahwa kamu mengklaim bahwa Allah mengutusmu.' Rasulullah menjawab: 'Benar'. Dia bertanya, 'Siapakah yang menciptakan langit? ' Rasulullah menjawab: 'Allah.' Dia bertanya, 'Siapakah yang menciptakan bumi? ' Rasulullah menjawab: 'Allah.' Dia bertanya, 'Siapakah yang memancangkan gunung-gunung ini dan menjadikan isinya segala sesuatu yang Dia ciptakan? ' Beliau menjawab: 'Allah.' Dia bertanya, 'Maka demi Dzat yang menciptakan langit, menciptakan bumi, dan memancangkan gunung-gunung ini, apakah Allah yang mengutusmu? ' Beliau menjawab: 'Ya.' Dia bertanya, 'Utusanmu mengklaim bahwa kami wajib melakukan shalat lima waktu sehari semalam, (apakah ini benar)? ' Beliau menjawab: 'Benar'. Dia bertanya, 'Demi Dzat yang mengutusmu, apakah Allah menyuruhmu untuk melakukan ini? ' Beliau menjawab: 'Ya'. Dia bertanya, 'Utusanmu mengklaim bahwa kitab wajib melakukan puasa Ramadlan pada setiap tahun kita, (apakah ini benar)? ' Beliau menjawab: 'Ya'. Dia bertanya, 'Demi Dzat yang mengutusmu, apakah Allah menyuruhmu untuk melakukan ini? ' Beliau menjawab: 'Ya'. Dia bertanya, 'Utusanmu mengklaim bahwa kami wajib melakukan haji bagi siapa di antara kami yang mampu menempuh jalan-Nya, (apakah ini benar)? ' Beliau menjawab, 'Ya benar'. Kemudian dia berpaling dan berkata, 'Demi Dzat yang mengutusmu dengan kebenaran, aku tidak akan menambah atas kewajiban tersebut dan tidak akan mengurangi darinya'. Maka Nabi shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Jika benar (yang dikatakannya), sungguh dia akan masuk surga'.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Abdullah bin Hasyim al-Abdi] telah menceritakan kepada kami [Bahz] telah menceritakan kepada kami [Sulaiman bin al-Mughirah] dari [Tsabit] dia berkata, [Anas] berkata, </span><span class="se">\"</span><span class="s2">Kami terhalangi untuk bertanya tentang sesuatu dari al-Qur'an kepada Rasulullah.</span><span class="se">\"</span><span class="s2"> Lalu dia membawakan hadits dengan semisalnya."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24197</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"حَدَّثَنَا مُحَمَّدُ بْنُ عَبْدِ اللَّهِ بْنِ نُمَيْرٍ حَدَّثَنَا أَبِي حَدَّثَنَا عَمْرُو بْنُ عُثْمَانَ حَدَّثَنَا مُوسَى بْنُ طَلْحَةَ قَالَ حَدَّثَنِي أَبُو أَيُّوبَ</span><span class="se">\n</span><span class="s2">أَنَّ أَعْرَابِيًّا عَرَضَ لِرَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَهُوَ فِي سَفَرٍ فَأَخَذَ بِخِطَامِ نَاقَتِهِ أَوْ بِزِمَامِهَا ثُمَّ قَالَ يَا رَسُولَ اللَّهِ أَوْ يَا مُحَمَّدُ أَخْبِرْنِي بِمَا يُقَرِّبُنِي مِنْ الْجَنَّةِ وَمَا يُبَاعِدُنِي مِنْ النَّارِ قَالَ فَكَفَّ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ثُمَّ نَظَرَ فِي أَصْحَابِهِ ثُمَّ قَالَ لَقَدْ وُفِّقَ أَوْ لَقَدْ هُدِيَ قَالَ كَيْفَ قُلْتَ قَالَ فَأَعَادَ فَقَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ تَعْبُدُ اللَّهَ لَا تُشْرِكُ بِهِ شَيْئًا وَتُقِيمُ الصَّلَاةَ وَتُؤْتِي الزَّكَاةَ وَتَصِلُ الرَّحِمَ دَعْ النَّاقَةَ</span><span class="se">\n</span><span class="s2">و حَدَّثَنِي مُحَمَّدُ بْنُ حَاتِمٍ وَعَبْدُ الرَّحْمَنِ بْنُ بِشْرٍ قَالَا حَدَّثَنَا بَهْزٌ حَدَّثَنَا شُعْبَةُ حَدَّثَنَا مُحَمَّدُ بْنُ عُثْمَانَ بْنِ عَبْدِ اللَّهِ بْنِ مَوْهَبٍ وَأَبُوهُ عُثْمَانُ أَنَّهُمَا سَمِعَا مُوسَى بْنَ طَلْحَةَ يُحَدِّثُ عَنْ أَبِي أَيُّوبَ عَنْ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بِمِثْلِ هَذَا الْحَدِيثِ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin Abdullah bin Numair] telah menceritakan kepada kami [bapakku] telah menceritakan kepada kami [Amru bin Utsman] telah menceritakan kepada kami [Musa bin Thalhah] dia berkata, telah menceritakan kepadaku [Abu Ayyub], bahwa seorang Badui menghalangi Rasulullah shallallahu 'alaihi wasallam sedangkan beliau dalam suatu perjalanan, lalu dia mengambil tali kendali untanya atau tali kekangnya, kemudian dia berkata, 'Wahai Rasulullah, atau wahai Muhammad, kabarkanlah kepadaku tentang sesuatu yang mendekatkanku dari surga dan sesuatu yang menjauhkanku dari neraka? ' Perawi berkata, 'Lalu Nabi shallallahu 'alaihi wasallam berhenti kemudian melihat para sahabat-sahabatnya, kemudian bersabda: </span><span class="se">\"</span><span class="s2">Dia telah diberi taufik atau telah diberi hidayah.' Dia bertanya, 'Apa yang kamu katakan? ' Perawi berkata, 'Lalu dia mengulanginya'. Maka Nabi shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Kamu menyembah Allah, tidak mensyirikkan-Nya dengan sesuatu apa pun, mendirikan shalat, menunaikan zakat, dan menyambung tali silaturrahim, lalu tinggalkanlah unta tersebut'.</span><span class="se">\"</span><span class="s2"> Telah menceritakan kepada kami [Muhammad bin Hatim] dan [Abdurrahman bin Bisyr] keduanya berkata, telah menceritakan kepada kami [Bahz] telah menceritakan kepada kami [Syu'bah] telah menceritakan kepada kami [Muhammad bin Utsman bin Abdullah bin Mauhab] dan bapaknya [Utsman] bahwa keduanya mendengar [Musa bin Thalhah] menceritakan dari [Abu Ayyub] dari Nabi shallallahu 'alaihi wasallam dengan semisal hadits ini.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24198</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"حَدَّثَنَا يَحْيَى بْنُ يَحْيَى التَّمِيمِيُّ أَخْبَرَنَا أَبُو الْأَحْوَصِ ح و حَدَّثَنَا أَبُو بَكْرِ بْنُ أَبِي شَيْبَةَ حَدَّثَنَا أَبُو الْأَحْوَصِ عَنْ أَبِي إِسْحَقَ عَنْ مُوسَى بْنِ طَلْحَةَ عَنْ أَبِي أَيُّوبَ قَالَ</span><span class="se">\n</span><span class="s2">جَاءَ رَجُلٌ إِلَى النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَقَالَ دُلَّنِي عَلَى عَمَلٍ أَعْمَلُهُ يُدْنِينِي مِنْ الْجَنَّةِ وَيُبَاعِدُنِي مِنْ النَّارِ قَالَ تَعْبُدُ اللَّهَ لَا تُشْرِكُ بِهِ شَيْئًا وَتُقِيمُ الصَّلَاةَ وَتُؤْتِي الزَّكَاةَ وَتَصِلُ ذَا رَحِمِكَ فَلَمَّا أَدْبَرَ قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِنْ تَمَسَّكَ بِمَا أُمِرَ بِهِ دَخَلَ الْجَنَّةَ</span><span class="se">\n</span><span class="s2">وَفِي رِوَايَةِ ابْنِ أَبِي شَيْبَةَ إِنْ تَمَسَّكَ بِهِ"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Yahya bin Yahya at-Tamimi] telah mengabarkan kepada kami [Abu al-Ahwash]. (dalam riwayat lain disebutkan) Dan telah menceritakan kepada kami [Abu Bakar bin Abu Syaibah] telah menceritakan kepada kami [Abu al-Ahwash] dari [Abu Ishaq] dari [Musa bin Thalhah] dari [Abu Ayyub] dia berkata, </span><span class="se">\"</span><span class="s2">Seorang laki-laki mendatangi Nabi shallallahu 'alaihi wasallam, seraya bertanya, 'Tunjukkanlah kepadaku suatu amalan yang mendekatkanku dari surga dan menjauhkanku dari neraka? ' Beliau menjawab: 'Kamu menyembah Allah, tidak mensyirikkan-Nya dengan sesuatu apa pun, mendirikan shalat, menunaikan zakat, menyambung silaturrahim dengan keluarga.</span><span class="se">\"</span><span class="s2"> Ketika dia pamit maka Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Jika dia berpegang teguh pada sesuatu yang diperintahkan kepadanya niscaya dia masuk surga'.</span><span class="se">\"</span><span class="s2"> Dan dalam suatu riwayat  [Ibnu Abu Syaibah], </span><span class="se">\"</span><span class="s2">Jika dia berpegang teguh dengannya.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Muslim"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muslim"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"pagination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4930</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">329</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8000/api/hadits/muslim?page=2"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan list hadits berdasarkan spesifik buku hadits</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/hadits/&lt;HADITS_BOOK_SLUG&gt;</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HADITS_BOOK_SLUG</td>
+<td>Slug dari buku hadits</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-all-hadits-books-list-by-hadits-book">Get All Hadits Books List by Hadits Book</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/hadits/abu-daud/all'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Abdullah bin Masla..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musaddad bin Musar..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musa bin Isma'il]..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musaddad bin Musar..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Amru bin Marzuq] t..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Abdullah bin Muham..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musaddad bin Musar..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin Yahya..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musaddad bin Musar..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musa bin Isma'il]..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Abdullah bin Masla..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin Basys..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Zuhair bin Harb] t..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Ubaidullah bin Uma..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Utsman] dan [Abu B..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin al Mu..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Muhammad bin Al 'A..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Nashr bin Ali] dar..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Zuhair bin Harb] d..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Musaddad] telah me..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan seluruh list hadits berdasarkan spesifik buku hadits</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/hadits/&lt;HADITS_BOOK_SLUG&gt;/all</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HADITS_BOOK_SLUG</td>
+<td>Slug dari buku hadits</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-hadits-detail">Get Hadits Detail</h2>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'http://api.tafsirq.com/hadits/muslim/24185'</span>
+</code></pre>
+<blockquote>
+<p>Perintah diatas akan mengembalikan struktur JSON seperti ini:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24185</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text_arabic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"و حَدَّثَنِي زُهَيْرُ بْنُ حَرْبٍ حَدَّثَنَا إِسْمَعِيلُ يَعْنِي ابْنَ عُلَيَّةَ عَنْ عَبْدِ الْعَزِيزِ بْنِ صُهَيْبٍ عَنْ أَنَسِ بْنِ مَالِكٍ أَنَّهُ قَالَ</span><span class="se">\n</span><span class="s2">إِنَّهُ لَيَمْنَعُنِي أَنْ أُحَدِّثَكُمْ حَدِيثًا كَثِيرًا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ مَنْ تَعَمَّدَ عَلَيَّ كَذِبًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنْ النَّارِ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"text_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Telah menceritakan kepada kami [Zuhair bin Harb] telah menceritakan kepada kami [Ismail] -yaitu Ibnu 'Ulayyah- dari [Abdul Aziz bin Shuhaib] dari [Anas bin Malik] bahwasanya dia berkata, 'Sesungguhnya sesuatu yang menghalangiku untuk menceritakan hadits yang banyak kepada kalian adalah, bahwa Rasulullah shallallahu 'alaihi wasallam bersabda: </span><span class="se">\"</span><span class="s2">Barangsiapa yang sengaja melakukan kedustaan atas namaku, maka hendaklah dia menempati tempat duduknya dari neraka'.</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"book"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Muslim"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muslim"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Mendapatkan detail hadits</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.tafsirq.com/hadits/&lt;HADITS_BOOK_SLUG&gt;/&lt;HADITS_ITEM_ID&gt;</code></p>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HADITS_BOOK_SLUG</td>
+<td>Slug dari buku hadits</td>
+</tr>
+<tr>
+<td>HADITS_ITEM_ID</td>
+<td>ID dari item hadits</td>
+</tr>
+</tbody></table>
+
+          <h1 id="errors">Errors</h1>
+
+<p>The TafsirQ API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request &ndash; Your request sucks</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized &ndash; Your API key is wrong</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden &ndash; The data requested is hidden for administrators only</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found &ndash; The specified data could not be found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed &ndash; You tried to access a data with an invalid method</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone &ndash; The data requested has been removed from our servers</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests &ndash; You&rsquo;re requesting too many data! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable &ndash; We&rsquo;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

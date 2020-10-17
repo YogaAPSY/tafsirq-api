@@ -1,0 +1,39 @@
+stages:
+    - test
+    - deploy
+
+cleantest_job:
+    image: javanlabs/php-tools:latest
+    stage: test
+    tags:
+        - cloud
+    except:
+        - master
+    script:
+        - phpcs --standard=PSR2 app/
+        
+        
+metrictest_job:
+    only:
+        - master
+    image: javanlabs/php-tools:latest
+    tags:
+        - cloud
+    stage: test
+    script:
+        - echo "project_namespace=$CI_PROJECT_NAMESPACE&project_name=$CI_PROJECT_NAME&data=`phpmetrics app/`" | curl -s --data-binary @- https://idev.javan.co.id/upload_phpmetrics
+        - phpmetrics --report-html report.html --offline app/
+        - curl -F "report=@report.html" -F "project_namespace=$CI_PROJECT_NAMESPACE" -F "project_name=$CI_PROJECT_NAME" https://idev.javan.co.id/upload_phpmetrics_report
+        - phpmetrics2 --report-html=report app/
+        - tar czvf report.tar.gz report/
+        - curl -F "report=@report.tar.gz" -F "project_namespace=$CI_PROJECT_NAMESPACE" -F "project_name=$CI_PROJECT_NAME" https://idev.javan.co.id/upload_phpmetrics_report2
+
+deploy_staging_job:
+    only:
+        - master
+    stage: deploy
+    image: javanlabs/ssh-client:latest
+    tags:
+        - cloud
+    script:
+        - ssh root@$SERVER_PRODUCTION "cd /home/javan/staging-api.tafsirq && git pull && chown -R javan:javan /home/javan/staging-api.tafsirq && cd /home/javan/staging-api.tafsirq && php composer.phar install --no-scripts --no-progress --prefer-dist --no-suggest"
